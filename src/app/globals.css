@@ -3,31 +3,59 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-color: #eae6e6;
+  --text-color: #000000;
+  --border-color: #dddddd;
+  --primary-color: #42e13f;
+  --primary-color-light: #66dc64;
+  --primary-color-dark: #47bc45;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+body[data-theme='dark'] {
+  --background-color: #333333;
+  --text-color: #ffffff;
+  --border-color: #555555;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.button-primary {
+  background-color: var(--primary-color);
+  padding: .5rem 2rem;
+  border-radius: .5rem; 
+  width: 100%;
+  box-shadow:  2 2 0 0 #000000;
+}
+.button-primary:hover {  
+  background-color: var(--primary-color-light);
+}
+.button-primary:active {
+  background-color: var(--primary-color-dark);
 }

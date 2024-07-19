@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.input_field {
+    background-color: #413e3e;
+    padding: .5rem 2rem;
+    border-radius: .5rem;
+    border: 1px solid #898888;
+}

@@ -1,0 +1,9 @@
+.container {
+    width: 30%;
+    padding: 6rem 2.5rem;
+    background-color: #7f7f7f63;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
